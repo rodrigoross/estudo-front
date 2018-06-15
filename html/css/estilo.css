@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*************************** Cabeçalho */
+header {
+	height: 220px;
+	/**IMAGEM DE FUNDO*/
+	background-image: url(../images/Header-Awati2.png);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: top right;
+}
+/** Botões para acessar a plataforma**/
+header .menu-plataforma{
+	padding: 2px;
+	text-align: center;
+	border-bottom-left-radius: 28px;
+	border-bottom-right-radius: 28px;
+	border-top-right-radius: 0px;
+	width: 10%;
+	background: #5C2D91;
+}
+
+header .menu-plataforma .botao-plt-d, header .menu-plataforma .botao-plt-e{
+	background: #5C2D91;
+	text-decoration: none;
+	color: #FFFFFF;
+	padding: 1px;
+	
+}
+
+header .menu-plataforma .botao-plt-d{
+	border-bottom-left-radius: 28px;
+} 
+header .menu-plataforma .botao-plt-e{
+	border-bottom-right-radius: 28px;
+}
+
+header .menu-plataforma .botao-plt-d:hover, header .menu-plataforma .botao-plt-e:hover {
+  color:#7e6ebd;
+  text-decoration: none;
+}
+
+/*******Menu Principal, nav está fora do header por que sou incapaz de arrumar aqui no header**/
+.menu {
+	margin: 0px 15%;
+}
+.menu-principal .item-menu{
+	list-style-type: none;
+	padding: 5px 0px;
+	margin-bottom: 5px;
+	width:auto;
+	align-self: right;
+	text-align: left;
+	background: #FFFFFF;
+	float: left;
+}
+
+.botao-menu{
+  font-family: Arial, Helvetica Neue, Helvetica, Gotham,"sans-serif" ;
+  color: #2B2B2B;
+  font-size: 20px;
+  background: #FFFFFF;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+.botao-menu:hover {
+  background: #5C2D91;
+  color:#FFFFFF;
+  text-decoration: none;
+}
+/******************************CORPO**/
+
+/***CARROSSEL SUBSTITUIR***/
+.carrossel{
+	clear: both;
+	margin: 2px 15%;
+	padding: 0px;
+}
+
+.carrossel .slider{
+	display: block;
+	height: 290px;
+	widows: 600px;
+	margin: auto;
+	margin-top: 20px;
+	position: relative;
+}
+
+.carrossel .slider li{
+	list-style: none;
+	position: absolute;
+}
+
+.carrossel img{
+	margin: auto;
+	height: 100%;
+	width: 100%;
+}
+
+.carrossel .slider input{
+	display: none;
+}
+
+/*Código pra transição do slide*/
+.slider label{
+	background-color:#FAA61A;
+	bottom: 10px;
+	cursor: pointer;
+	display: block;
+	height: 10px;
+	position: absolute;
+	width: 10px;
+	z-index: 10px;
+}
+
+.slider li:nth-child(1){
+	left: 10px;
+}
+.slider li:nth-child(2){
+	left: 40px;
+}
+
+.slider li:nth-child(3){
+	left: 70px;
+}
+
+.slider img{
+	opacity: 0;
+	visibility: hidden;
+}
+
+.slider	li input:checked ~ img{
+	opacity: 1;
+	visibility: visible;
+	z-index: 10;
+}
