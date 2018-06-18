@@ -25,52 +25,48 @@
 			<li class="item-menu"><a class="botao-menu" href="#" title="Entre em contato">Contato</a></li>
 		</nav>
 	</div>
-	<!--Tentativa carrossel bootstrap-->
-	<!--<div id="carrossel" class="carrossel-slide" data-ride="carrossel">
-		<div class="carousel-interno">
-			<div class="carroussel-item active">
-				<img class="d-block w-100" src="../img/awati.png" alt="Primeiro slide">
-			</div>
-			<div class="carroussel-item">
-				<img class="d-block w-100" src="../img/sucupira1.jpg" alt="Segundo slide">
-			</div>
-			<div class="carroussel-item">
-			  	<img class="d-block w-100" src="../img/sucupira2.jpg" alt="Terceiro slide">
-			</div>
-		</div>
-		<a class="controle-carrossel-ant" href="#carrossel" role="button" data-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="sr-only">Anterior</span>
-		</a>
-		<a class="controle-carrossel-prox" href="#carrossel" role="button" data-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="sr-only">Próximo</span>
-		</a>
-	</div>-->
 	
-	<!--Temporario-->
-	<div class="carrossel">
-		<ul class="slider">
-			<li>
-				<input type="radio" id="slide1" name="slide" checked>
-				<label for="slide1"></label>
-				<img src="images/awati.png">
-			</li>
-			<li>
-				<input type="radio" id="slide2" name="slide">
-				<label for="slide2"></label>
-				<img src="images/sucupira1.jpg">
-			</li>
-			<li>
-				<input type="radio" id="slide3" name="slide">
-				<label for="slide3"></label>
-				<img src="images/sucupira2.jpg">
-			</li>
-		</ul>
-	</div>
+	<!--Tentativa carrossel bootstrap-->
+	<div id="banner-carrossel" class="carrossel" data-ride="carrossel">
+	  <!-- Indicators -->
+		  <ol class="indicador-carrossel">
+			<li data-target="#banner-carrossel" data-slide-to="0" class="active"></li>
+			<li data-target="#banner-carrossel" data-slide-to="1"></li>
+			<li data-target="#banner-carrossel" data-slide-to="2"></li>
+		  </ol>
+
+	  <!-- Wrapper for slides -->
+		  <div class="carrossel-interno" role="listbox">
+			<div class="item-carrossel active">
+			  <img src="images/awati.png" alt="Awati">
+			</div>
+
+			<div class="item-carrossel">
+			  <img src="images/sucupira1.jpg" alt="Prototipo Sucupira">
+			</div>
+
+			<div class="item-carrossel">
+			  <img src="images/sucupira2.jpg" alt="Sucupira em homologação">
+			</div>
+		  </div>
+
+	  <!-- Controles Direita-Esquerda -->
+		  <a class="controle-carrossel-anterior" href="#banner-carrossel" data-slide="prev" role="button">
+			<span class="controle-carrossel-anterior-icon"></span>
+			<!--<span class="sr-only">Anterior</span>-->
+		  </a>
+		  <a class="controle-carrossel-proximo" href="#banner-carrossel" data-slide="next" role="button">
+			<span class="controle-carrossel-proximo-icon"></span>
+			<!--<span class="sr-only">Próximo</span>-->
+		  </a>
+	</div>	
 	<section class="conteudo">
 		
 	</section>
+
+	<footer class="rodape">
+		O conteúdo de  class "rodape" é inserido aqui
 	
+	</footer>
 </body>
 </html>
