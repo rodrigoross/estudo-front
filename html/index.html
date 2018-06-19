@@ -3,10 +3,13 @@
 <head>
 <meta charset="utf-8">
 <title>Awati - tecnologia planejada</title>
-<link rel="icon" type="imagem/png" href="images/Milho_Awati.png" />
-<link href="css/estilo.css" rel="stylesheet" type="text/css">
+<link rel="icon" type="imagem/png" href="images/Milho_Awati.png"/>
+<link href="js/carousel.js" type="text/javascript"/>
+<!--<link href="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"/>-->
+<!--<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>-->
 <link href="js/script.js" type="text/javascript"/>
-
+<link href="css/carousel.css" rel="stylesheet" type="text/css"/>
+<link href="css/estilo.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <header>
@@ -14,7 +17,7 @@
         	 <img src="../img/Header-Awati2.png" alt="Cabeçalho Awati"/>
        	</div>-->
        	<nav class="menu-plataforma">
-       		<a class="botao-plt-d" href="#" title="Abra um Chamado">Chamado</a> 
+       		<a class="botao-plt-d" href="#" title="Abra um Chamado">Cliente</a> 
 			<a class="botao-plt-e" href="#" title="Acesso Portal">Sucupira</a>
        	</nav>
     </header>
@@ -25,48 +28,56 @@
 			<li class="item-menu"><a class="botao-menu" href="#" title="Entre em contato">Contato</a></li>
 		</nav>
 	</div>
-	
-	<!--Tentativa carrossel bootstrap-->
-	<div id="banner-carrossel" class="carrossel" data-ride="carrossel">
-	  <!-- Indicators -->
-		  <ol class="indicador-carrossel">
-			<li data-target="#banner-carrossel" data-slide-to="0" class="active"></li>
-			<li data-target="#banner-carrossel" data-slide-to="1"></li>
-			<li data-target="#banner-carrossel" data-slide-to="2"></li>
-		  </ol>
-
-	  <!-- Wrapper for slides -->
-		  <div class="carrossel-interno" role="listbox">
-			<div class="item-carrossel active">
-			  <img src="images/awati.png" alt="Awati">
+	<div class="container">
+		<div id="banner-carousel" class="carousel slide" data-ride="carousel">
+		<!--Indicadores-->
+			<ol class="carousel-indicators">
+				<li data-target="#banner-carousel" data-slide-to="0" class="active"></li>
+				<li data-target="#banner-carousel" data-slide-to="1"></li>
+				<li data-target="#banner-carousel" data-slide-to="2"></li>
+			</ol>	
+		<!--Container das imagenes-->
+			<div class="carousel-inner" role="listbox">
+				<div class="carousel-item active">
+					<img src="images/awati.png" alt="Plano de Fundo Awati"/>
+				</div>
+				<div class="carousel-item">
+			    	<img src="images/sucupira1.jpg" alt="Imagem Sucupira - Prototipo"/>
+				</div>
+				<div class="carousel-item">
+			    	<img src="images/sucupira2.jpg" alt="Imagem Sucupira - Homologando"/>
+				</div>
 			</div>
-
-			<div class="item-carrossel">
-			  <img src="images/sucupira1.jpg" alt="Prototipo Sucupira">
-			</div>
-
-			<div class="item-carrossel">
-			  <img src="images/sucupira2.jpg" alt="Sucupira em homologação">
-			</div>
-		  </div>
-
-	  <!-- Controles Direita-Esquerda -->
-		  <a class="controle-carrossel-anterior" href="#banner-carrossel" data-slide="prev" role="button">
-			<span class="controle-carrossel-anterior-icon"></span>
-			<!--<span class="sr-only">Anterior</span>-->
-		  </a>
-		  <a class="controle-carrossel-proximo" href="#banner-carrossel" data-slide="next" role="button">
-			<span class="controle-carrossel-proximo-icon"></span>
-			<!--<span class="sr-only">Próximo</span>-->
-		  </a>
-	</div>	
+		<!--Controles-->
+			<a class="left carousel-control-prev" href="#banner-carousel" data-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</a>
+			<a class="right carousel-control-next" href="#banner-carousel" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+		</div>
+	</div>
 	<section class="conteudo">
-		
+		<h1 class="titulo">Informação </h1>
+		<p class="p-normal"> 
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis neque varius lacus cursus, nec tristique tortor fermentum. Duis laoreet bibendum efficitur. Proin auctor semper libero. Cras mattis justo eget mi pellentesque, id imperdiet urna porta. Aliquam ut massa eget sem eleifend porta. Proin viverra facilisis nisl at egestas. Pellentesque at orci eu metus luctus ornare ac ac eros. Aliquam erat volutpat. Donec placerat dui lectus, a semper sapien interdum a. primeiro paragrafo.
+		</p>
+		<p class="p-normal"> 
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis neque varius lacus cursus, nec tristique tortor fermentum. Duis laoreet bibendum efficitur. Proin auctor semper libero. Cras mattis justo eget mi pellentesque, id imperdiet urna porta. Aliquam ut massa eget sem eleifend porta. Proin viverra facilisis nisl at egestas. Pellentesque at orci eu metus luctus ornare ac ac eros. Aliquam erat volutpat. Donec placerat dui lectus, a semper sapien interdum a. segundo paragrafo.
+		</p>
 	</section>
-
 	<footer class="rodape">
-		O conteúdo de  class "rodape" é inserido aqui
-	
-	</footer>
+		<div class="social">
+			<a class="social-icon" href="https://www.facebook.com/awatitecnologia/">
+			<img src="images/Seta-Direita.png"/>
+			</a>
+		</div>
+		<div class="contato">
+		O conteúdo de  class "contato" é inserido aqui
+		</div>
+		<div class="copyright">
+			©Rodrigo Ross - 2018
+		</div>
+</footer>
 </body>
 </html>

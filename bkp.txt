@@ -1,0 +1,254 @@
+<!--Tentativa carrossel bootstrap-->
+	<div id="banner-carrossel" class="carrossel" data-ride="carrossel">
+	  <!-- Indicators -->
+		  <ol class="indicador-carrossel">
+			<li data-target="#banner-carrossel" data-slide-to="0" class="active"></li>
+			<li data-target="#banner-carrossel" data-slide-to="1"></li>
+			<li data-target="#banner-carrossel" data-slide-to="2"></li>
+		  </ol>
+
+	  <!-- Wrapper dos slides -->
+		  <div class="carrossel-interno" role="listbox">
+			<div class="item-carrossel active">
+			  <img src="images/awati.png" alt="Awati">
+			</div>
+
+			<div class="item-carrossel">
+			  <img src="images/sucupira1.jpg" alt="Prototipo Sucupira">
+			</div>
+
+			<div class="item-carrossel">
+			  <img src="images/sucupira2.jpg" alt="Sucupira em homologação">
+			</div>
+		  </div>
+
+	  <!-- Controles Direita-Esquerda -->
+		  <a class="controle-carrossel-anterior" href="#banner-carrossel" data-slide="prev" role="button">
+			<span class="controle-carrossel-anterior-icon"></span>
+			<!--<span class="sr-only">Anterior</span>-->
+		  </a>
+		  <a class="controle-carrossel-proximo" href="#banner-carrossel" data-slide="next" role="button">
+			<span class="controle-carrossel-proximo-icon"></span>
+			<!--<span class="sr-only">Próximo</span>-->
+		  </a>
+	</div>
+
+===============================
+
+
+/**
+   * ------------------------------------------------------------------------
+   * Carrossel
+   * ------------------------------------------------------------------------
+   */
+.carrossel {
+  position: relative;
+}
+
+.carrossel-interno {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.item-carrossel {
+  position: relative;
+  display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.item-carrossel.active,
+.item-carrossel-next,
+.item-carrossel-prev {
+  display: block;
+}
+
+.item-carrossel-next,
+.item-carrossel-prev {
+  position: absolute;
+  top: 0;
+}
+
+.item-carrossel-next.item-carrossel-anterior,
+.item-carrossel-prev.item-carrossel-right {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.item-carrossel-next.item-carrossel-left,
+.item-carrossel-prev.item-carrossel-right{-webkit-transform:translateX(0);transform:translateX(0)}@supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)){
+     .item-carrossel-next.item-carrossel-left,
+     .item-carrossel-prev.item-carrossel-right{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}
+     .active.item-carrossel-right,
+     .item-carrossel-next{-webkit-transform:translateX(100%);transform:translateX(100%)}@supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)){
+         .active.item-carrossel-right,
+         .item-carrossel-next{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}}.active.item-carrossel-left,
+         .item-carrossel-prev{-webkit-transform:translateX(-100%);transform:translateX(-100%)}@supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)){
+             .active.item-carrossel-left,
+             .item-carrossel-prev{-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}}
+             .carousel-control-next,
+             .carousel-control-prev{position:absolute;top:0;bottom:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:15%;color:#fff;text-align:center;opacity:.5}
+
+/*Controles carrossel*/
+.controle-carrossel-anterior,
+.controle-carrossel-proximo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 15%;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.controle-carrossel-anterior:hover, .controle-carrossel-anterior:focus,
+.controle-carrossel-proximo:hover,
+.controle-carrossel-proximo:focus {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  opacity: .9;
+}
+
+.controle-carrossel-anterior {
+  left: 0;
+}
+
+.controle-carrossel-proximo {
+  right: 0;
+}
+
+.controle-carrossel-anterior-icon,
+.controle-carrossel-proximo-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+/*Era para ser só o background mas não consegui fazer funcionar*/
+
+
+
+.controle-carrossel-anterior-icon {
+  background-image: url('../images/Seta-Esquerda2.png');
+}
+
+.controle-carrossel-proximo-icon {
+  background-image: url('../images/Seta-Direita2.png');
+}
+
+/*Indicadores */
+
+.indicador-carrossel {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  z-index: 15;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 15%;
+  margin-left: 15%;
+  list-style: none;
+}
+
+.indicador-carrossel li {
+  position: relative;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 30px;
+  height: 3px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.indicador-carrossel li::before {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 10px;
+  content: "";
+}
+
+.indicador-carrossel li::after {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 10px;
+  content: "";
+}
+
+.indicador-carrossel .active {
+  background-color: #FFFFFF;
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 20px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.carrossel{
+	clear: both;
+	margin: 2px 15%;
+	padding: 0px;
+}
+
+.carrossel .slider{
+	display: block;
+	height: 290px;
+	widows: 600px;
+	margin: auto;
+	margin-top: 20px;
+	position: relative;
+}
+
+.carrossel .slider li{
+	list-style: none;
+	position: absolute;
+}
+
+.carrossel img{
+	margin: auto;
+	height: 100%;
+	width: 100%;
+}
