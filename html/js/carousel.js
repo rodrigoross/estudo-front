@@ -1,5 +1,5 @@
-/*import $ from 'jquery'
-import Util from './util'*/
+import $ from 'jquery-3.3.1'
+import Util from './util'
 
 /**
  * --------------------------------------------------------------------------
@@ -61,7 +61,7 @@ const Carousel = (($) => {
   };
 
   const ClassName = {
-    CAROUSEL : 'carrossel',
+    CAROUSEL : 'carousel',
     ACTIVE   : 'active',
     SLIDE    : 'slide',
     RIGHT    : 'item-carrossel-right',
@@ -215,8 +215,8 @@ const Carousel = (($) => {
 
     _getConfig(config) {
       config = {
-		...Default,
-        ...config;
+		    ...Default,
+        ...config,
       }
       Util.typeCheckConfig(NAME, config, DefaultType)
       return config

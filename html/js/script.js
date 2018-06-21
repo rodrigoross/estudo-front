@@ -1,25 +1,40 @@
+/**
+   * ------------------------------------------------------------------------
+   * Javascript por Rodrigo Ross
+   * ------------------------------------------------------------------------
+   */
+
+
 $(document).ready(function(){
 	"use strict";
     // Activate Carousel
-    $("#banner-carrossel").carousel();
-    
+    $("#banner-carousel").carousel();
+
     // Enable Carousel Indicators
-    $(".item-carrossel").click(function(){
-       $(".carrossel").carousel(0);
+    $(".item-carousel").click(function(){
+       $(".carousel").carousel(0);
     });
-    $(".item-carrossel").click(function(){
-        $(".carrossel").carousel(1);
+    $(".item-carousel").click(function(){
+        $(".carousel").carousel(1);
     });
-    $(".item-carrossel").click(function(){
-        $(".carrossel").carousel(2);
+    $(".item-carousel").click(function(){
+        $(".carousel").carousel(2);
     });
     
     // Enable Carousel Controls
     $(".left").click(function(){
-        $('.carrossel').carousel("prev");
+        $('.carousel').carousel("prev");
    });
     $(".right").click(function(){
-        $('.carrossel').carousel("next");
+        $('.carousel').carousel("next");
     });
-});
 
+	//Troca da imagem no hover
+	function hover(element) {
+        element.setAttribute('src', '../images/icons/icone-facebook-hover.png');
+      };
+      
+      function unhover(element) {
+        element.setAttribute('src', '../images/icons/icone-facebook2.png"');
+      };										 
+});
